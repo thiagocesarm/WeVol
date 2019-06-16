@@ -526,15 +526,21 @@
                                 <rect key="frame" x="0.0" y="376" width="414" height="377"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XSD-sx-0cG">
+                                <rect key="frame" x="0.0" y="376" width="414" height="377"/>
+                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyX-VO-9OK">
                                 <rect key="frame" x="20" y="761" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ukq-Ol-KpD"/>
                                 </constraints>
-                                <state key="normal" title="Abrir Mapa">
+                                <state key="normal" title="Mostrar mapa">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleMapView" destination="muJ-CZ-qSg" eventType="touchUpInside" id="kv8-sw-MRF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -544,9 +550,11 @@
                             <constraint firstItem="FmQ-aG-62u" firstAttribute="trailing" secondItem="Q5Q-AD-lEs" secondAttribute="trailing" constant="20" id="3Xe-Cm-48h"/>
                             <constraint firstItem="FmQ-aG-62u" firstAttribute="trailing" secondItem="CyX-VO-9OK" secondAttribute="trailing" constant="20" id="4RZ-pT-xiY"/>
                             <constraint firstItem="YVW-BB-Y0I" firstAttribute="top" secondItem="WF1-NR-3KP" secondAttribute="bottom" constant="8" id="8Gx-zd-cpf"/>
+                            <constraint firstItem="CyX-VO-9OK" firstAttribute="top" secondItem="XSD-sx-0cG" secondAttribute="bottom" constant="8" id="8wk-NI-uhY"/>
                             <constraint firstItem="DPT-MZ-1Ho" firstAttribute="leading" secondItem="FmQ-aG-62u" secondAttribute="leading" constant="20" id="BmN-5W-xgX"/>
                             <constraint firstItem="CyX-VO-9OK" firstAttribute="leading" secondItem="FmQ-aG-62u" secondAttribute="leading" constant="20" id="Ch0-5s-biT"/>
                             <constraint firstItem="FmQ-aG-62u" firstAttribute="trailing" secondItem="yHp-uq-c7g" secondAttribute="trailing" id="DPn-KP-G8J"/>
+                            <constraint firstItem="XSD-sx-0cG" firstAttribute="trailing" secondItem="FmQ-aG-62u" secondAttribute="trailing" id="EXL-uX-cke"/>
                             <constraint firstItem="Vg9-da-rD4" firstAttribute="leading" secondItem="FmQ-aG-62u" secondAttribute="leading" constant="20" id="HjZ-9R-u0t"/>
                             <constraint firstItem="hUW-5L-bac" firstAttribute="top" secondItem="FmQ-aG-62u" secondAttribute="top" constant="20" id="HqZ-oA-NgZ"/>
                             <constraint firstItem="FmQ-aG-62u" firstAttribute="trailing" secondItem="WF1-NR-3KP" secondAttribute="trailing" constant="20" id="KRi-ew-DMe"/>
@@ -554,6 +562,7 @@
                             <constraint firstItem="FmQ-aG-62u" firstAttribute="trailing" secondItem="hUW-5L-bac" secondAttribute="trailing" constant="20" id="O09-ZO-Knv"/>
                             <constraint firstItem="yHp-uq-c7g" firstAttribute="top" secondItem="Vg9-da-rD4" secondAttribute="bottom" constant="8" id="O4h-Jg-dDb"/>
                             <constraint firstItem="Vg9-da-rD4" firstAttribute="top" secondItem="DPT-MZ-1Ho" secondAttribute="bottom" constant="8" id="RLI-b7-IS7"/>
+                            <constraint firstItem="XSD-sx-0cG" firstAttribute="top" secondItem="Vg9-da-rD4" secondAttribute="bottom" constant="8" id="S9y-ls-rHA"/>
                             <constraint firstItem="FmQ-aG-62u" firstAttribute="trailing" secondItem="Vg9-da-rD4" secondAttribute="trailing" constant="20" id="TiZ-Sh-0Fw"/>
                             <constraint firstItem="rHQ-GQ-150" firstAttribute="top" secondItem="8he-kW-IjI" secondAttribute="bottom" constant="8" id="VHM-V3-VrS"/>
                             <constraint firstItem="3Tq-JI-mYf" firstAttribute="leading" secondItem="FmQ-aG-62u" secondAttribute="leading" constant="20" id="XWK-Gm-IZa"/>
@@ -567,6 +576,7 @@
                             <constraint firstItem="CyX-VO-9OK" firstAttribute="top" secondItem="yHp-uq-c7g" secondAttribute="bottom" constant="8" id="heD-Wt-aad"/>
                             <constraint firstItem="8he-kW-IjI" firstAttribute="top" secondItem="YVW-BB-Y0I" secondAttribute="bottom" id="n1A-xo-RS3"/>
                             <constraint firstItem="rHQ-GQ-150" firstAttribute="leading" secondItem="FmQ-aG-62u" secondAttribute="leading" constant="20" id="rDk-86-YuP"/>
+                            <constraint firstItem="XSD-sx-0cG" firstAttribute="leading" secondItem="FmQ-aG-62u" secondAttribute="leading" id="rl0-SN-fxX"/>
                             <constraint firstItem="WF1-NR-3KP" firstAttribute="top" secondItem="3Tq-JI-mYf" secondAttribute="bottom" constant="12" id="tSO-Oq-epB"/>
                             <constraint firstItem="hUW-5L-bac" firstAttribute="leading" secondItem="FmQ-aG-62u" secondAttribute="leading" constant="20" id="tYU-md-Csk"/>
                             <constraint firstItem="WF1-NR-3KP" firstAttribute="leading" secondItem="FmQ-aG-62u" secondAttribute="leading" constant="20" id="vvy-wE-dyY"/>
@@ -581,6 +591,7 @@
                         <outlet property="distanceDropDownAnchorView" destination="Q5Q-AD-lEs" id="Lrq-Y2-mIx"/>
                         <outlet property="distanceTextField" destination="rHQ-GQ-150" id="4zY-nI-swg"/>
                         <outlet property="institutionNameTextField" destination="3Tq-JI-mYf" id="eIh-5F-hlZ"/>
+                        <outlet property="mapView" destination="XSD-sx-0cG" id="lwk-a2-G6q"/>
                         <outlet property="openMapButton" destination="CyX-VO-9OK" id="T4r-nM-2kP"/>
                         <outlet property="tableView" destination="yHp-uq-c7g" id="E4F-y7-gZ1"/>
                         <outlet property="typeDropDownAnchorView" destination="8he-kW-IjI" id="73S-eL-dr7"/>

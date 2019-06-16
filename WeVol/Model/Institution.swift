@@ -17,4 +17,6 @@ struct Institution {
     let bankAccountList: [BankAccount]
     let jobTypesList: [JobType]
     let distance: Float
+    let latitude: Double
+    let longitude: Double
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import DropDown
+import MapKit
 
 class SearchViewController: UIViewController {
     
@@ -18,6 +19,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var distanceDropDownAnchorView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var openMapButton: UIButton!
+    @IBOutlet weak var mapView: MKMapView!
+    
     
     let allInstitutions = DatabaseSimulator.getInstitutionData()
     var searchResultInstitutions: [Institution] = []
@@ -31,6 +34,15 @@ class SearchViewController: UIViewController {
     var jobTypeSelected: JobType?
     var distanceSelected: Float?
     
+    var isTableView = true
+    
+    // Map properties
+    let regionRadius: CLLocationDistance = 1000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,11 +52,17 @@ class SearchViewController: UIViewController {
         
         configureDropDown()
         
+        // IMD location
+        let initialLocation = CLLocation(latitude: -5.8322572, longitude: -35.2058046)
+        centerMapOnLocation(location: initialLocation)
+        
+        mapView.isHidden = true
         tableView.isHidden = true
         openMapButton.isHidden = true
         
         tableView.delegate = self
         tableView.dataSource = self
+        mapView.delegate = self
         typeTextField.delegate = self
         distanceTextField.delegate = self
     }
@@ -80,6 +98,7 @@ class SearchViewController: UIViewController {
     
     @IBAction func searchInstitutions(_ sender: Any) {
         searchResultInstitutions = allInstitutions
+        mapView.removeAnnotations(mapView.annotations)
         
         if let nameToSearch = institutionNameTextField.text?.lowercased(),
             !nameToSearch.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
@@ -102,18 +121,37 @@ class SearchViewController: UIViewController {
         
         if searchResultInstitutions.count == 0 {
             tableView.isHidden = true
+            mapView.isHidden = true
             openMapButton.isHidden = true
             let alert = UIAlertController(title: "Ops...", message: "Nenhuma instituição encontrada!", preferredStyle: .alert)
             let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alert.addAction(action)
             self.present(alert, animated: true)
         } else {
+            // Update tableView
             tableView.reloadData()
             let indexPath = IndexPath(row: 0, section: 0)
             tableView.scrollToRow(at: indexPath, at: .top, animated: false)
-            tableView.isHidden = false
+            
+            // Update map markers
+            for institution in searchResultInstitutions {
+                mapView.addAnnotation(MapPoint(institution: institution))
+            }
+            tableView.isHidden = !isTableView
+            mapView.isHidden = isTableView
             openMapButton.isHidden = false
         }
+    }
+    
+    @IBAction func toggleMapView() {
+        isTableView = !isTableView
+        if isTableView {
+            openMapButton.setTitle("Mostrar mapa", for: .normal)
+        } else {
+            openMapButton.setTitle("Mostrar lista", for: .normal)
+        }
+        tableView.isHidden = !isTableView
+        mapView.isHidden = isTableView
     }
     
 }
@@ -148,4 +186,38 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(institutionDetailsViewController, animated: true)
     }
     
+}
+
+extension SearchViewController: MKMapViewDelegate {
+    // 1
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // 2
+        guard let annotation = annotation as? MapPoint else { return nil }
+        // 3
+        let identifier = "marker"
+        var view: MKMarkerAnnotationView
+        // 4
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            as? MKMarkerAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+            // 5
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        return view
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let location = view.annotation as! MapPoint
+        let institution = location.institution
+        
+        let institutionDetailsViewController = storyboard?.instantiateViewController(withIdentifier: "InstitutionDetails") as! InstitutionDetailsViewController
+        
+        institutionDetailsViewController.institution = institution
+        navigationController?.pushViewController(institutionDetailsViewController, animated: true)
+    }
 }
