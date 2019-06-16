@@ -19,27 +19,32 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var openMapButton: UIButton!
     
+    let allInstitutions = DatabaseSimulator.getInstitutionData()
+    var searchResultInstitutions: [Institution] = []
     let typeDropDown = DropDown()
     let distanceDropDown = DropDown()
     
-    let typeDataSource = ["Todos os tipos de trabalho", "Trabalhos Manuais", "Cuidados de Pessoas"]
+    let allJobTypes = DatabaseSimulator.getAllJobTypes()
+    var typeDataSource = ["Todos os tipos de trabalho"]
     let distanceDataSource = ["Qualquer distância", "0.5 km", "1 km", "3 km", "5 km"]
     
-    var jobTypeSelected = ""
-    var distanceSelected = ""
+    var jobTypeSelected: JobType?
+    var distanceSelected: Float?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
-        jobTypeSelected = typeDataSource[0]
-        distanceSelected = distanceDataSource[0]
+        
+        typeDataSource += DatabaseSimulator.getAllJobTypes().map { $0.string }
         
         configureDropDown()
         
         tableView.isHidden = true
         openMapButton.isHidden = true
         
+        tableView.delegate = self
+        tableView.dataSource = self
         typeTextField.delegate = self
         distanceTextField.delegate = self
     }
@@ -54,18 +59,61 @@ class SearchViewController: UIViewController {
         distanceDropDown.dataSource = distanceDataSource
         
         typeDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.jobTypeSelected = item
+            if index > 0 {
+                self.jobTypeSelected = self.allJobTypes[index - 1]
+            } else {
+                self.jobTypeSelected = nil
+            }
             self.typeTextField.text = item
         }
         distanceDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.distanceSelected = item
+            if index > 0 {
+                let distanceString = String(item.dropLast(3))
+                self.distanceSelected = (distanceString as NSString).floatValue
+            } else {
+                self.distanceSelected = nil
+            }
             self.distanceTextField.text = item
         }
     }
     
     
     @IBAction func searchInstitutions(_ sender: Any) {
-        print("\(jobTypeSelected) -- \(distanceSelected)")
+        searchResultInstitutions = allInstitutions
+        
+        if let nameToSearch = institutionNameTextField.text?.lowercased(),
+            !nameToSearch.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            searchResultInstitutions = searchResultInstitutions.filter {
+                return $0.name.lowercased().contains(nameToSearch)
+            }
+        }
+        
+        if let jobSelected = jobTypeSelected {
+            searchResultInstitutions = searchResultInstitutions.filter {
+                return $0.jobTypesList.contains(jobSelected)
+            }
+        }
+        
+        if let distance = distanceSelected {
+            searchResultInstitutions = searchResultInstitutions.filter {
+                return $0.distance <= distance
+            }
+        }
+        
+        if searchResultInstitutions.count == 0 {
+            tableView.isHidden = true
+            openMapButton.isHidden = true
+            let alert = UIAlertController(title: "Ops...", message: "Nenhuma instituição encontrada!", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        } else {
+            tableView.reloadData()
+            let indexPath = IndexPath(row: 0, section: 0)
+            tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+            tableView.isHidden = false
+            openMapButton.isHidden = false
+        }
     }
     
 }
@@ -79,4 +127,18 @@ extension SearchViewController: UITextFieldDelegate {
         }
         return false
     }
+}
+
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchResultInstitutions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let institutionCell = Bundle.main.loadNibNamed("InstitutionTableViewCell", owner: self, options: nil)?.first as! InstitutionTableViewCell
+        institutionCell.institution = searchResultInstitutions[indexPath.row]
+        return institutionCell
+    }
+    
 }

@@ -31,6 +31,9 @@
 		7BC7F03422B69D19008CF2B1 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03322B69D19008CF2B1 /* ShareViewController.swift */; };
 		7BC7F03622B6B629008CF2B1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03522B6B629008CF2B1 /* SearchViewController.swift */; };
 		7BC7F03822B6C2F3008CF2B1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03722B6C2F3008CF2B1 /* UIViewControllerExtension.swift */; };
+		7BC7F03A22B6C88E008CF2B1 /* InstitutionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC7F03922B6C88E008CF2B1 /* InstitutionTableViewCell.xib */; };
+		7BC7F03C22B6CD77008CF2B1 /* DatabaseSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03B22B6CD77008CF2B1 /* DatabaseSimulator.swift */; };
+		7BC7F03F22B6D9DA008CF2B1 /* JobType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03E22B6D9DA008CF2B1 /* JobType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		7BC7F03322B69D19008CF2B1 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		7BC7F03522B6B629008CF2B1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7BC7F03722B6C2F3008CF2B1 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		7BC7F03922B6C88E008CF2B1 /* InstitutionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstitutionTableViewCell.xib; sourceTree = "<group>"; };
+		7BC7F03B22B6CD77008CF2B1 /* DatabaseSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseSimulator.swift; sourceTree = "<group>"; };
+		7BC7F03E22B6D9DA008CF2B1 /* JobType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobType.swift; sourceTree = "<group>"; };
 		9B404324423C0879903DCB6A /* Pods-WeVolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVolUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeVolUITests/Pods-WeVolUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4AD65EDAC80FA29632A636A /* Pods_WeVol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeVol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC721CF5EED6E98612ED406A /* Pods_WeVolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeVolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +136,7 @@
 		7B3DC3A022AFDDA300369A26 /* WeVol */ = {
 			isa = PBXGroup;
 			children = (
+				7BC7F03D22B6D9B9008CF2B1 /* Enums */,
 				7BC7F02E22B690C0008CF2B1 /* Helpers */,
 				7B3DC3CC22B084CD00369A26 /* CustomViews */,
 				7B3DC3C722AFE35900369A26 /* Model */,
@@ -156,12 +163,13 @@
 		7B3DC3C122AFDFDB00369A26 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				7BC7F02C22B68810008CF2B1 /* BankAccountTableViewCell.swift */,
 				7B3DC3C222AFDFFF00369A26 /* InstitutionTableViewCell.swift */,
-				7B3DC3CF22B287ED00369A26 /* SingleLabelTableViewCell.swift */,
-				7B3DC3D022B287ED00369A26 /* SingleLabelTableViewCell.xib */,
+				7BC7F03922B6C88E008CF2B1 /* InstitutionTableViewCell.xib */,
 				7B3DC3D322B2905A00369A26 /* OpportunityTableViewCell.swift */,
 				7B3DC3D422B2905A00369A26 /* OpportunityTableViewCell.xib */,
-				7BC7F02C22B68810008CF2B1 /* BankAccountTableViewCell.swift */,
+				7B3DC3CF22B287ED00369A26 /* SingleLabelTableViewCell.swift */,
+				7B3DC3D022B287ED00369A26 /* SingleLabelTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -201,8 +209,17 @@
 				7BC7F02F22B690D5008CF2B1 /* StringExtension.swift */,
 				7BC7F03122B69AAF008CF2B1 /* UIColorExtension.swift */,
 				7BC7F03722B6C2F3008CF2B1 /* UIViewControllerExtension.swift */,
+				7BC7F03B22B6CD77008CF2B1 /* DatabaseSimulator.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7BC7F03D22B6D9B9008CF2B1 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				7BC7F03E22B6D9DA008CF2B1 /* JobType.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		C6987A0E9BB2F295F8468E5A /* Pods */ = {
@@ -300,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC7F03A22B6C88E008CF2B1 /* InstitutionTableViewCell.xib in Resources */,
 				7B3DC3D622B2905A00369A26 /* OpportunityTableViewCell.xib in Resources */,
 				7B3DC3D222B287ED00369A26 /* SingleLabelTableViewCell.xib in Resources */,
 				7B3DC3AC22AFDDA800369A26 /* LaunchScreen.storyboard in Resources */,
@@ -397,6 +415,8 @@
 				7B3DC3D122B287ED00369A26 /* SingleLabelTableViewCell.swift in Sources */,
 				7BC7F03822B6C2F3008CF2B1 /* UIViewControllerExtension.swift in Sources */,
 				7B3DC3D522B2905A00369A26 /* OpportunityTableViewCell.swift in Sources */,
+				7BC7F03C22B6CD77008CF2B1 /* DatabaseSimulator.swift in Sources */,
+				7BC7F03F22B6D9DA008CF2B1 /* JobType.swift in Sources */,
 				7B3DC3CB22B01A9C00369A26 /* InstitutionDetailsViewController.swift in Sources */,
 				7B3DC3A222AFDDA400369A26 /* AppDelegate.swift in Sources */,
 				7B3DC3C622AFE05500369A26 /* HomeViewController.swift in Sources */,

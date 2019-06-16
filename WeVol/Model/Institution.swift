@@ -15,4 +15,6 @@ struct Institution {
     let detailedInfo: String
     let opportunityList: [Opportunity]
     let bankAccountList: [BankAccount]
+    let jobTypesList: [JobType]
+    let distance: Float
 }
