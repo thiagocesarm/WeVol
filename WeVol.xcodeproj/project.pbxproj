@@ -26,6 +26,7 @@
 		7BC7F02D22B68810008CF2B1 /* BankAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F02C22B68810008CF2B1 /* BankAccountTableViewCell.swift */; };
 		7BC7F03022B690D5008CF2B1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F02F22B690D5008CF2B1 /* StringExtension.swift */; };
 		7BC7F03222B69AAF008CF2B1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03122B69AAF008CF2B1 /* UIColorExtension.swift */; };
+		7BC7F03422B69D19008CF2B1 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03322B69D19008CF2B1 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		7BC7F02C22B68810008CF2B1 /* BankAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountTableViewCell.swift; sourceTree = "<group>"; };
 		7BC7F02F22B690D5008CF2B1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7BC7F03122B69AAF008CF2B1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		7BC7F03322B69D19008CF2B1 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				7B3DC3C522AFE05500369A26 /* HomeViewController.swift */,
 				7B3DC3CA22B01A9C00369A26 /* InstitutionDetailsViewController.swift */,
 				7BC7F02822B67AF1008CF2B1 /* DonationViewController.swift */,
+				7BC7F03322B69D19008CF2B1 /* ShareViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC7F03422B69D19008CF2B1 /* ShareViewController.swift in Sources */,
 				7BC7F02922B67AF1008CF2B1 /* DonationViewController.swift in Sources */,
 				7B3DC3D122B287ED00369A26 /* SingleLabelTableViewCell.swift in Sources */,
 				7B3DC3D522B2905A00369A26 /* OpportunityTableViewCell.swift in Sources */,

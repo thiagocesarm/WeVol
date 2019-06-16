@@ -19,8 +19,7 @@ class DonationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        institutionNameLabel.text = institution.name
-        descriptionLabel.text = "Você pode realizar transações financeiras para \(institution.name) através dos dados bancários abaixo"
+        descriptionLabel.text = "Você pode realizar transações financeiras para o(a) \(institution.name) através dos dados bancários abaixo"
         descriptionLabel.attributedText = descriptionLabel.text?.attributedText(boldString: institution.name, font: descriptionLabel.font)
 
         tableView.delegate = self

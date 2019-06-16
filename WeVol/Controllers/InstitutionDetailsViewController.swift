@@ -43,10 +43,18 @@ class InstitutionDetailsViewController: UIViewController {
         performSegue(withIdentifier: "institutionDetailsToDonationSegue", sender: self)
     }
     
+    @IBAction func goToSharePage(_ sender: Any) {
+        performSegue(withIdentifier: "institutionDetailsToShareSegue", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "institutionDetailsToDonationSegue" {
             if let donationViewController = segue.destination as? DonationViewController {
                 donationViewController.institution = self.institution
+            }
+        } else if segue.identifier == "institutionDetailsToShareSegue" {
+            if let shareViewController = segue.destination as? ShareViewController {
+                shareViewController.institution = self.institution
             }
         }
     }
