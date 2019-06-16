@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DropDown
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //
 //
 //        UIBarButtonItem.appearance().tintColor = UIColor.white
+        
+        DropDown.startListeningToKeyboard()
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)], for: .selected)
        

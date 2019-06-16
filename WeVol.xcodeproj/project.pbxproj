@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26B58AEFAD5A6FB2622B0F64 /* Pods_WeVol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AD65EDAC80FA29632A636A /* Pods_WeVol.framework */; };
+		677FFE04AC38CA34D0E6AF8C /* Pods_WeVolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC721CF5EED6E98612ED406A /* Pods_WeVolUITests.framework */; };
 		7B3DC3A222AFDDA400369A26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DC3A122AFDDA400369A26 /* AppDelegate.swift */; };
 		7B3DC3A722AFDDA400369A26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3DC3A522AFDDA400369A26 /* Main.storyboard */; };
 		7B3DC3A922AFDDA800369A26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3DC3A822AFDDA800369A26 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 		7BC7F03022B690D5008CF2B1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F02F22B690D5008CF2B1 /* StringExtension.swift */; };
 		7BC7F03222B69AAF008CF2B1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03122B69AAF008CF2B1 /* UIColorExtension.swift */; };
 		7BC7F03422B69D19008CF2B1 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03322B69D19008CF2B1 /* ShareViewController.swift */; };
+		7BC7F03622B6B629008CF2B1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03522B6B629008CF2B1 /* SearchViewController.swift */; };
+		7BC7F03822B6C2F3008CF2B1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03722B6C2F3008CF2B1 /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		75F8BDCD7F6CB5AFE12848AE /* Pods-WeVol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVol.release.xcconfig"; path = "Target Support Files/Pods-WeVol/Pods-WeVol.release.xcconfig"; sourceTree = "<group>"; };
+		78FD8FC193A3A47775B5DAB6 /* Pods-WeVolUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVolUITests.release.xcconfig"; path = "Target Support Files/Pods-WeVolUITests/Pods-WeVolUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7B3DC39E22AFDDA300369A26 /* WeVol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeVol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3DC3A122AFDDA400369A26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3DC3A622AFDDA400369A26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +70,12 @@
 		7BC7F02F22B690D5008CF2B1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7BC7F03122B69AAF008CF2B1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		7BC7F03322B69D19008CF2B1 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		7BC7F03522B6B629008CF2B1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7BC7F03722B6C2F3008CF2B1 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		9B404324423C0879903DCB6A /* Pods-WeVolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVolUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeVolUITests/Pods-WeVolUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4AD65EDAC80FA29632A636A /* Pods_WeVol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeVol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC721CF5EED6E98612ED406A /* Pods_WeVolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeVolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD403D48C33AEB70F8CE6E53 /* Pods-WeVol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVol.debug.xcconfig"; path = "Target Support Files/Pods-WeVol/Pods-WeVol.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B58AEFAD5A6FB2622B0F64 /* Pods_WeVol.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,18 +91,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677FFE04AC38CA34D0E6AF8C /* Pods_WeVolUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DCE8801BF1CB2785E531C98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4AD65EDAC80FA29632A636A /* Pods_WeVol.framework */,
+				AC721CF5EED6E98612ED406A /* Pods_WeVolUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7B3DC39522AFDDA300369A26 = {
 			isa = PBXGroup;
 			children = (
 				7B3DC3A022AFDDA300369A26 /* WeVol */,
 				7B3DC3B522AFDDA800369A26 /* WeVolUITests */,
 				7B3DC39F22AFDDA300369A26 /* Products */,
+				C6987A0E9BB2F295F8468E5A /* Pods */,
+				2DCE8801BF1CB2785E531C98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +173,7 @@
 				7B3DC3CA22B01A9C00369A26 /* InstitutionDetailsViewController.swift */,
 				7BC7F02822B67AF1008CF2B1 /* DonationViewController.swift */,
 				7BC7F03322B69D19008CF2B1 /* ShareViewController.swift */,
+				7BC7F03522B6B629008CF2B1 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,8 +200,20 @@
 			children = (
 				7BC7F02F22B690D5008CF2B1 /* StringExtension.swift */,
 				7BC7F03122B69AAF008CF2B1 /* UIColorExtension.swift */,
+				7BC7F03722B6C2F3008CF2B1 /* UIViewControllerExtension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C6987A0E9BB2F295F8468E5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD403D48C33AEB70F8CE6E53 /* Pods-WeVol.debug.xcconfig */,
+				75F8BDCD7F6CB5AFE12848AE /* Pods-WeVol.release.xcconfig */,
+				9B404324423C0879903DCB6A /* Pods-WeVolUITests.debug.xcconfig */,
+				78FD8FC193A3A47775B5DAB6 /* Pods-WeVolUITests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B3DC3BB22AFDDA800369A26 /* Build configuration list for PBXNativeTarget "WeVol" */;
 			buildPhases = (
+				12C53CDAED785EFBA7DAE099 /* [CP] Check Pods Manifest.lock */,
 				7B3DC39A22AFDDA300369A26 /* Sources */,
 				7B3DC39B22AFDDA300369A26 /* Frameworks */,
 				7B3DC39C22AFDDA300369A26 /* Resources */,
+				2DB564A556B8A0999E17B9AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B3DC3BE22AFDDA800369A26 /* Build configuration list for PBXNativeTarget "WeVolUITests" */;
 			buildPhases = (
+				38C590899E537B542B0A6A5D /* [CP] Check Pods Manifest.lock */,
 				7B3DC3AE22AFDDA800369A26 /* Sources */,
 				7B3DC3AF22AFDDA800369A26 /* Frameworks */,
 				7B3DC3B022AFDDA800369A26 /* Resources */,
@@ -276,14 +317,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12C53CDAED785EFBA7DAE099 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeVol-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DB564A556B8A0999E17B9AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeVol/Pods-WeVol-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeVol/Pods-WeVol-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38C590899E537B542B0A6A5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeVolUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7B3DC39A22AFDDA300369A26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC7F03622B6B629008CF2B1 /* SearchViewController.swift in Sources */,
 				7BC7F03422B69D19008CF2B1 /* ShareViewController.swift in Sources */,
 				7BC7F02922B67AF1008CF2B1 /* DonationViewController.swift in Sources */,
 				7B3DC3D122B287ED00369A26 /* SingleLabelTableViewCell.swift in Sources */,
+				7BC7F03822B6C2F3008CF2B1 /* UIViewControllerExtension.swift in Sources */,
 				7B3DC3D522B2905A00369A26 /* OpportunityTableViewCell.swift in Sources */,
 				7B3DC3CB22B01A9C00369A26 /* InstitutionDetailsViewController.swift in Sources */,
 				7B3DC3A222AFDDA400369A26 /* AppDelegate.swift in Sources */,
@@ -454,6 +566,7 @@
 		};
 		7B3DC3BC22AFDDA800369A26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD403D48C33AEB70F8CE6E53 /* Pods-WeVol.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +585,7 @@
 		};
 		7B3DC3BD22AFDDA800369A26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75F8BDCD7F6CB5AFE12848AE /* Pods-WeVol.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -490,6 +604,7 @@
 		};
 		7B3DC3BF22AFDDA800369A26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B404324423C0879903DCB6A /* Pods-WeVolUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,6 +625,7 @@
 		};
 		7B3DC3C022AFDDA800369A26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78FD8FC193A3A47775B5DAB6 /* Pods-WeVolUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
