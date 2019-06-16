@@ -12,4 +12,7 @@ struct Institution {
     let image: String
     let name: String
     let category: String
+    let detailedInfo: String
+    let opportunityList: [Opportunity]
+    let bankAccountList: [BankAccount]
 }
