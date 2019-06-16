@@ -141,4 +141,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return institutionCell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let institutionDetailsViewController = storyboard?.instantiateViewController(withIdentifier: "InstitutionDetails") as! InstitutionDetailsViewController
+        
+        institutionDetailsViewController.institution = searchResultInstitutions[indexPath.row]
+        navigationController?.pushViewController(institutionDetailsViewController, animated: true)
+    }
+    
 }

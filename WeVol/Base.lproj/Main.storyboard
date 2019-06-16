@@ -315,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWN-9k-vk9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356.521739130435" y="-944.19642857142856"/>
+            <point key="canvasLocation" x="2266.666666666667" y="-944.19642857142856"/>
         </scene>
         <!--Donation View Controller-->
         <scene sceneID="5xX-ma-nrX">
@@ -450,7 +450,7 @@
             </objects>
             <point key="canvasLocation" x="1369.5652173913045" y="-1615.1785714285713"/>
         </scene>
-        <!--Busca-->
+        <!--WeVol-->
         <scene sceneID="fkr-rl-3hc">
             <objects>
                 <viewController id="muJ-CZ-qSg" customClass="SearchViewController" customModule="WeVol" customModuleProvider="target" sceneMemberID="viewController">
@@ -459,51 +459,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encontre Instituições" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUW-5L-bac">
-                                <rect key="frame" x="20" y="76" width="374" height="29"/>
+                                <rect key="frame" x="20" y="108" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome da instituição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Tq-JI-mYf">
-                                <rect key="frame" x="20" y="137" width="374" height="30"/>
+                                <rect key="frame" x="20" y="169" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF1-NR-3KP">
-                                <rect key="frame" x="20" y="179" width="374" height="22"/>
+                                <rect key="frame" x="20" y="211" width="374" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tipo de trabalho" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVW-BB-Y0I">
-                                <rect key="frame" x="20" y="209" width="374" height="30"/>
+                                <rect key="frame" x="20" y="241" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8he-kW-IjI" userLabel="Type Drop Down Anchor View">
-                                <rect key="frame" x="20" y="239" width="374" height="1"/>
+                                <rect key="frame" x="20" y="271" width="374" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="KIw-WK-w5E"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Distância máxima" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rHQ-GQ-150">
-                                <rect key="frame" x="20" y="248" width="374" height="30"/>
+                                <rect key="frame" x="20" y="280" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5Q-AD-lEs" userLabel="Distance Drop Down Anchor View">
-                                <rect key="frame" x="20" y="278" width="374" height="1"/>
+                                <rect key="frame" x="20" y="310" width="374" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Xoz-kl-iO6"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPT-MZ-1Ho">
-                                <rect key="frame" x="20" y="287" width="374" height="40"/>
+                                <rect key="frame" x="20" y="319" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Rcr-IF-2qT"/>
@@ -516,14 +516,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vg9-da-rD4">
-                                <rect key="frame" x="20" y="335" width="374" height="1"/>
+                                <rect key="frame" x="20" y="367" width="374" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="XNP-CI-iiV"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yHp-uq-c7g">
-                                <rect key="frame" x="0.0" y="344" width="414" height="409"/>
+                                <rect key="frame" x="0.0" y="376" width="414" height="377"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyX-VO-9OK">
@@ -548,7 +548,7 @@
                             <constraint firstItem="CyX-VO-9OK" firstAttribute="leading" secondItem="FmQ-aG-62u" secondAttribute="leading" constant="20" id="Ch0-5s-biT"/>
                             <constraint firstItem="FmQ-aG-62u" firstAttribute="trailing" secondItem="yHp-uq-c7g" secondAttribute="trailing" id="DPn-KP-G8J"/>
                             <constraint firstItem="Vg9-da-rD4" firstAttribute="leading" secondItem="FmQ-aG-62u" secondAttribute="leading" constant="20" id="HjZ-9R-u0t"/>
-                            <constraint firstItem="hUW-5L-bac" firstAttribute="top" secondItem="FmQ-aG-62u" secondAttribute="top" constant="32" id="HqZ-oA-NgZ"/>
+                            <constraint firstItem="hUW-5L-bac" firstAttribute="top" secondItem="FmQ-aG-62u" secondAttribute="top" constant="20" id="HqZ-oA-NgZ"/>
                             <constraint firstItem="FmQ-aG-62u" firstAttribute="trailing" secondItem="WF1-NR-3KP" secondAttribute="trailing" constant="20" id="KRi-ew-DMe"/>
                             <constraint firstItem="DPT-MZ-1Ho" firstAttribute="top" secondItem="Q5Q-AD-lEs" secondAttribute="bottom" constant="8" id="NYk-Kj-N4H"/>
                             <constraint firstItem="FmQ-aG-62u" firstAttribute="trailing" secondItem="hUW-5L-bac" secondAttribute="trailing" constant="20" id="O09-ZO-Knv"/>
@@ -576,7 +576,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FmQ-aG-62u"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Busca" image="searchIcon" id="chS-3W-Iah"/>
+                    <navigationItem key="navigationItem" title="WeVol" id="xNP-Vx-Orq"/>
                     <connections>
                         <outlet property="distanceDropDownAnchorView" destination="Q5Q-AD-lEs" id="Lrq-Y2-mIx"/>
                         <outlet property="distanceTextField" destination="rHQ-GQ-150" id="4zY-nI-swg"/>
@@ -589,7 +589,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Zh-9k-B4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1600.0000000000002" y="-607.36607142857144"/>
+            <point key="canvasLocation" x="-689.85507246376812" y="-607.36607142857144"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tIT-Cq-GCl">
@@ -602,7 +602,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="38o-rJ-ban" kind="relationship" relationship="viewControllers" id="IJ0-tG-GBw"/>
-                        <segue destination="muJ-CZ-qSg" kind="relationship" relationship="viewControllers" id="7ai-Dg-vpf"/>
+                        <segue destination="JfF-EE-XQC" kind="relationship" relationship="viewControllers" id="7ai-Dg-vpf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLj-ZI-45V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -627,6 +627,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AiT-Bp-lyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1600.0000000000002" y="-1285.0446428571429"/>
+        </scene>
+        <!--Busca-->
+        <scene sceneID="SXp-EA-6hB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JfF-EE-XQC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Busca" image="searchIcon" id="chS-3W-Iah"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9YE-NG-Scf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="muJ-CZ-qSg" kind="relationship" relationship="rootViewController" id="DLB-RL-Slx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dON-sz-clI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1600.0000000000002" y="-607.36607142857144"/>
         </scene>
     </scenes>
     <resources>
