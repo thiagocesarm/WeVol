@@ -17,6 +17,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var distanceTextField: UITextField!
     @IBOutlet weak var typeDropDownAnchorView: UIView!
     @IBOutlet weak var distanceDropDownAnchorView: UIView!
+    @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var openMapButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
@@ -45,6 +46,9 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        okButton.roundButton()
+//        openMapButton.roundButton()
         
         self.hideKeyboardWhenTappedAround()
         
@@ -174,6 +178,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.deselectRow(at: indexPath, animated: false)
         let institutionCell = Bundle.main.loadNibNamed("InstitutionTableViewCell", owner: self, options: nil)?.first as! InstitutionTableViewCell
         institutionCell.institution = searchResultInstitutions[indexPath.row]
         return institutionCell

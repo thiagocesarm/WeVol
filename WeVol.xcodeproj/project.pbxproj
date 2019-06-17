@@ -37,6 +37,8 @@
 		7BC7F04122B6F58C008CF2B1 /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F04022B6F58C008CF2B1 /* MapPoint.swift */; };
 		7BC7F04322B70647008CF2B1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F04222B70647008CF2B1 /* SignInViewController.swift */; };
 		7BC7F04922B71008008CF2B1 /* SelectSignUpTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F04822B71008008CF2B1 /* SelectSignUpTypeViewController.swift */; };
+		7BC7F04B22B71F34008CF2B1 /* UserSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F04A22B71F34008CF2B1 /* UserSignUpViewController.swift */; };
+		7BC7F04D22B727ED008CF2B1 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F04C22B727ED008CF2B1 /* UIKitExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		7BC7F04022B6F58C008CF2B1 /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		7BC7F04222B70647008CF2B1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		7BC7F04822B71008008CF2B1 /* SelectSignUpTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSignUpTypeViewController.swift; sourceTree = "<group>"; };
+		7BC7F04A22B71F34008CF2B1 /* UserSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUpViewController.swift; sourceTree = "<group>"; };
+		7BC7F04C22B727ED008CF2B1 /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		9B404324423C0879903DCB6A /* Pods-WeVolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVolUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeVolUITests/Pods-WeVolUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4AD65EDAC80FA29632A636A /* Pods_WeVol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeVol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC721CF5EED6E98612ED406A /* Pods_WeVolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeVolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +194,7 @@
 				7BC7F03522B6B629008CF2B1 /* SearchViewController.swift */,
 				7BC7F04222B70647008CF2B1 /* SignInViewController.swift */,
 				7BC7F04822B71008008CF2B1 /* SelectSignUpTypeViewController.swift */,
+				7BC7F04A22B71F34008CF2B1 /* UserSignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				7BC7F03122B69AAF008CF2B1 /* UIColorExtension.swift */,
 				7BC7F03722B6C2F3008CF2B1 /* UIViewControllerExtension.swift */,
 				7BC7F03B22B6CD77008CF2B1 /* DatabaseSimulator.swift */,
+				7BC7F04C22B727ED008CF2B1 /* UIKitExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -431,6 +437,8 @@
 				7B3DC3CB22B01A9C00369A26 /* InstitutionDetailsViewController.swift in Sources */,
 				7B3DC3A222AFDDA400369A26 /* AppDelegate.swift in Sources */,
 				7B3DC3C622AFE05500369A26 /* HomeViewController.swift in Sources */,
+				7BC7F04B22B71F34008CF2B1 /* UserSignUpViewController.swift in Sources */,
+				7BC7F04D22B727ED008CF2B1 /* UIKitExtension.swift in Sources */,
 				7BC7F04122B6F58C008CF2B1 /* MapPoint.swift in Sources */,
 				7BC7F03222B69AAF008CF2B1 /* UIColorExtension.swift in Sources */,
 				7B3DC3CE22B268DC00369A26 /* Opportunity.swift in Sources */,

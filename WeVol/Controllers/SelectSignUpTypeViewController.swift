@@ -10,11 +10,17 @@ import UIKit
 
 class SelectSignUpTypeViewController: UIViewController {
 
+    @IBOutlet weak var userSignUpButton: UIButton!
+    @IBOutlet weak var institutionSignUp: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        userSignUpButton.roundButton()
+        institutionSignUp.roundButton()
     }
 
     @IBAction func goToUserSignUp() {
+        performSegue(withIdentifier: "UserSignUp", sender: self)
     }
     
     

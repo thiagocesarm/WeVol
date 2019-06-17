@@ -117,6 +117,35 @@ extension InstitutionDetailsViewController: UITableViewDelegate, UITableViewData
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1, indexPath.row > 0 {
+            if DatabaseSimulator.isLoggedIn {
+                let alert = UIAlertController(title: "", message: "Deseja confirmar participação nesse trabalho voluntário?", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+                let okAction = UIAlertAction(title: "Sim", style: .default, handler: { action in
+                    let alert = UIAlertController(title: "Sucesso ✅", message: "Participação confirmada!", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true)
+                })
+                alert.addAction(cancelAction)
+                alert.addAction(okAction)
+                tableView.deselectRow(at: indexPath, animated: false)
+                self.present(alert, animated: true)
+            } else {
+                let alert = UIAlertController(title: "Alerta", message: "Você precisa estar logado para confirmar participação. Deseja ir para a página de login?", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+                let okAction = UIAlertAction(title: "Sim", style: .default, handler: { action in
+                    self.tabBarController?.selectedIndex = 2
+                })
+                alert.addAction(cancelAction)
+                alert.addAction(okAction)
+                tableView.deselectRow(at: indexPath, animated: false)
+                self.present(alert, animated: true)
+            }
+        }
+    }
+    
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        if indexPath.section > 0 {
 //            return 220
