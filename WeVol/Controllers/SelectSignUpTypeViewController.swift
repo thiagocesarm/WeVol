@@ -23,8 +23,8 @@ class SelectSignUpTypeViewController: UIViewController {
         performSegue(withIdentifier: "UserSignUp", sender: self)
     }
     
-    
     @IBAction func goToInstitutionSignUp() {
+        performSegue(withIdentifier: "InstitutionSignUp", sender: self)
     }
     
 }
