@@ -9,12 +9,26 @@
 import UIKit
 
 class UserMenuViewController: UIViewController {
+    
+    @IBOutlet weak var institutionNameLabel: UILabel!
+    
+    var institution: Institution!
+    var shouldPresentAlert = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "WeVol"
         self.navigationItem.hidesBackButton = true
+        
+        institutionNameLabel.text = institution.name
+        
+        if shouldPresentAlert {
+            let alert = UIAlertController(title: "", message: "Instituição cadastrada com sucesso!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Sim", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
     }
 
 }

@@ -12,6 +12,8 @@ class DatabaseSimulator {
     
     static var isLoggedIn = false
     
+    static var loggedInstitution: Institution?
+    
     static func getInstitutionData() -> [Institution] {
         
         var institutions: [Institution] = []
