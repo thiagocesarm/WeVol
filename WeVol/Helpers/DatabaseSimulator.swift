@@ -9,6 +9,9 @@
 import Foundation
 
 class DatabaseSimulator {
+    
+    static var isLoggedIn = false
+    
     static func getInstitutionData() -> [Institution] {
         
         var institutions: [Institution] = []

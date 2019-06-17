@@ -35,6 +35,8 @@
 		7BC7F03C22B6CD77008CF2B1 /* DatabaseSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03B22B6CD77008CF2B1 /* DatabaseSimulator.swift */; };
 		7BC7F03F22B6D9DA008CF2B1 /* JobType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F03E22B6D9DA008CF2B1 /* JobType.swift */; };
 		7BC7F04122B6F58C008CF2B1 /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F04022B6F58C008CF2B1 /* MapPoint.swift */; };
+		7BC7F04322B70647008CF2B1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F04222B70647008CF2B1 /* SignInViewController.swift */; };
+		7BC7F04922B71008008CF2B1 /* SelectSignUpTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F04822B71008008CF2B1 /* SelectSignUpTypeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		7BC7F03B22B6CD77008CF2B1 /* DatabaseSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseSimulator.swift; sourceTree = "<group>"; };
 		7BC7F03E22B6D9DA008CF2B1 /* JobType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobType.swift; sourceTree = "<group>"; };
 		7BC7F04022B6F58C008CF2B1 /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
+		7BC7F04222B70647008CF2B1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7BC7F04822B71008008CF2B1 /* SelectSignUpTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSignUpTypeViewController.swift; sourceTree = "<group>"; };
 		9B404324423C0879903DCB6A /* Pods-WeVolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVolUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeVolUITests/Pods-WeVolUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4AD65EDAC80FA29632A636A /* Pods_WeVol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeVol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC721CF5EED6E98612ED406A /* Pods_WeVolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeVolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +188,8 @@
 				7BC7F02822B67AF1008CF2B1 /* DonationViewController.swift */,
 				7BC7F03322B69D19008CF2B1 /* ShareViewController.swift */,
 				7BC7F03522B6B629008CF2B1 /* SearchViewController.swift */,
+				7BC7F04222B70647008CF2B1 /* SignInViewController.swift */,
+				7BC7F04822B71008008CF2B1 /* SelectSignUpTypeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -416,10 +422,12 @@
 				7BC7F03422B69D19008CF2B1 /* ShareViewController.swift in Sources */,
 				7BC7F02922B67AF1008CF2B1 /* DonationViewController.swift in Sources */,
 				7B3DC3D122B287ED00369A26 /* SingleLabelTableViewCell.swift in Sources */,
+				7BC7F04922B71008008CF2B1 /* SelectSignUpTypeViewController.swift in Sources */,
 				7BC7F03822B6C2F3008CF2B1 /* UIViewControllerExtension.swift in Sources */,
 				7B3DC3D522B2905A00369A26 /* OpportunityTableViewCell.swift in Sources */,
 				7BC7F03C22B6CD77008CF2B1 /* DatabaseSimulator.swift in Sources */,
 				7BC7F03F22B6D9DA008CF2B1 /* JobType.swift in Sources */,
+				7BC7F04322B70647008CF2B1 /* SignInViewController.swift in Sources */,
 				7B3DC3CB22B01A9C00369A26 /* InstitutionDetailsViewController.swift in Sources */,
 				7B3DC3A222AFDDA400369A26 /* AppDelegate.swift in Sources */,
 				7B3DC3C622AFE05500369A26 /* HomeViewController.swift in Sources */,
