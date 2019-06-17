@@ -745,6 +745,22 @@
             </objects>
             <point key="canvasLocation" x="-691.304347826087" y="114.50892857142857"/>
         </scene>
+        <!--User Menu View Controller-->
+        <scene sceneID="EYc-5F-Mjw">
+            <objects>
+                <viewController storyboardIdentifier="UserMenu" id="5yM-NG-9gQ" customClass="UserMenuViewController" customModule="WeVol" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bpn-hl-lhG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vVl-7w-oux"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bvH-LE-vqQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9v-F4-8Yu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2267" y="-64"/>
+        </scene>
         <!--Select Sign Up Type View Controller-->
         <scene sceneID="ot4-zb-ire">
             <objects>

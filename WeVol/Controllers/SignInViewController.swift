@@ -18,6 +18,13 @@ class SignInViewController: UIViewController {
         hideKeyboardWhenTappedAround()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if DatabaseSimulator.isLoggedIn {
+            let perfilVC = storyboard?.instantiateViewController(withIdentifier: "UserMenu") as! UserMenuViewController
+            navigationController?.pushViewController(perfilVC, animated: false)
+        }
+    }
+    
     @IBAction func goToUserPage() {
     }
     

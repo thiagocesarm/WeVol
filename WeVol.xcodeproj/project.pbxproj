@@ -41,6 +41,7 @@
 		7BC7F04D22B727ED008CF2B1 /* UIKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F04C22B727ED008CF2B1 /* UIKitExtension.swift */; };
 		7BC7F04F22B73379008CF2B1 /* InstitutionSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F04E22B73379008CF2B1 /* InstitutionSignUpViewController.swift */; };
 		7BC7F05122B73657008CF2B1 /* InstitutionMapSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F05022B73657008CF2B1 /* InstitutionMapSignUpViewController.swift */; };
+		7BC7F05322B74043008CF2B1 /* UserMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F05222B74043008CF2B1 /* UserMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		7BC7F04C22B727ED008CF2B1 /* UIKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtension.swift; sourceTree = "<group>"; };
 		7BC7F04E22B73379008CF2B1 /* InstitutionSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionSignUpViewController.swift; sourceTree = "<group>"; };
 		7BC7F05022B73657008CF2B1 /* InstitutionMapSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstitutionMapSignUpViewController.swift; sourceTree = "<group>"; };
+		7BC7F05222B74043008CF2B1 /* UserMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuViewController.swift; sourceTree = "<group>"; };
 		9B404324423C0879903DCB6A /* Pods-WeVolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeVolUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeVolUITests/Pods-WeVolUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4AD65EDAC80FA29632A636A /* Pods_WeVol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeVol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC721CF5EED6E98612ED406A /* Pods_WeVolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeVolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 				7BC7F04A22B71F34008CF2B1 /* UserSignUpViewController.swift */,
 				7BC7F04E22B73379008CF2B1 /* InstitutionSignUpViewController.swift */,
 				7BC7F05022B73657008CF2B1 /* InstitutionMapSignUpViewController.swift */,
+				7BC7F05222B74043008CF2B1 /* UserMenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				7B3DC3D122B287ED00369A26 /* SingleLabelTableViewCell.swift in Sources */,
 				7BC7F04922B71008008CF2B1 /* SelectSignUpTypeViewController.swift in Sources */,
 				7BC7F05122B73657008CF2B1 /* InstitutionMapSignUpViewController.swift in Sources */,
+				7BC7F05322B74043008CF2B1 /* UserMenuViewController.swift in Sources */,
 				7BC7F03822B6C2F3008CF2B1 /* UIViewControllerExtension.swift in Sources */,
 				7B3DC3D522B2905A00369A26 /* OpportunityTableViewCell.swift in Sources */,
 				7BC7F03C22B6CD77008CF2B1 /* DatabaseSimulator.swift in Sources */,
