@@ -11,10 +11,14 @@ import UIKit
 class InstitutionSignUpViewController: UIViewController {
 
     @IBOutlet weak var institutionNameTextField: UITextField!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        descriptionTextView.layer.borderWidth = 1
+        descriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
+        descriptionTextView.layer.cornerRadius = 5.0
     }
 
     @IBAction func goToInstitutionMapSignUp() {

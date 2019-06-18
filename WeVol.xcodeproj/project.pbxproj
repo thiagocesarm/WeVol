@@ -27,6 +27,7 @@
 		7B872D7722B857FE00E3D655 /* BankAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B872D7622B857FE00E3D655 /* BankAccountTableViewCell.xib */; };
 		7B872D7922B85EC900E3D655 /* BankAccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B872D7822B85EC900E3D655 /* BankAccountListViewController.swift */; };
 		7B872D7B22B88A4E00E3D655 /* JobOpportunityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B872D7A22B88A4E00E3D655 /* JobOpportunityListViewController.swift */; };
+		7B872D7D22B901F200E3D655 /* AddJobOpportunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B872D7C22B901F200E3D655 /* AddJobOpportunityViewController.swift */; };
 		7BC7F02922B67AF1008CF2B1 /* DonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F02822B67AF1008CF2B1 /* DonationViewController.swift */; };
 		7BC7F02B22B67D4B008CF2B1 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F02A22B67D4B008CF2B1 /* BankAccount.swift */; };
 		7BC7F02D22B68810008CF2B1 /* BankAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7F02C22B68810008CF2B1 /* BankAccountTableViewCell.swift */; };
@@ -83,6 +84,7 @@
 		7B872D7622B857FE00E3D655 /* BankAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankAccountTableViewCell.xib; sourceTree = "<group>"; };
 		7B872D7822B85EC900E3D655 /* BankAccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountListViewController.swift; sourceTree = "<group>"; };
 		7B872D7A22B88A4E00E3D655 /* JobOpportunityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOpportunityListViewController.swift; sourceTree = "<group>"; };
+		7B872D7C22B901F200E3D655 /* AddJobOpportunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobOpportunityViewController.swift; sourceTree = "<group>"; };
 		7BC7F02822B67AF1008CF2B1 /* DonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationViewController.swift; sourceTree = "<group>"; };
 		7BC7F02A22B67D4B008CF2B1 /* BankAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccount.swift; sourceTree = "<group>"; };
 		7BC7F02C22B68810008CF2B1 /* BankAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountTableViewCell.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				7B872D7422B854CA00E3D655 /* AddBankAccountViewController.swift */,
 				7B872D7822B85EC900E3D655 /* BankAccountListViewController.swift */,
 				7B872D7A22B88A4E00E3D655 /* JobOpportunityListViewController.swift */,
+				7B872D7C22B901F200E3D655 /* AddJobOpportunityViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B872D7D22B901F200E3D655 /* AddJobOpportunityViewController.swift in Sources */,
 				7BC7F03622B6B629008CF2B1 /* SearchViewController.swift in Sources */,
 				7BC7F03422B69D19008CF2B1 /* ShareViewController.swift in Sources */,
 				7BC7F02922B67AF1008CF2B1 /* DonationViewController.swift in Sources */,

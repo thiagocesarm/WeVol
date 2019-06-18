@@ -9,8 +9,7 @@
 import UIKit
 
 class BankAccountListViewController: UIViewController {
-
-    let bankAccountToShow = BankAccount(bankName: "Caixa Econômica Federal", agencyNumber: "XXXX-X", accountNumber: "XXXXX-X")
+    
     @IBOutlet weak var tableView: UITableView!
     
     var shouldShowTableView = false
@@ -45,7 +44,10 @@ extension BankAccountListViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let bankAccountCell = Bundle.main.loadNibNamed("BankAccountTableViewCell", owner: self, options: nil)?.first as! BankAccountTableViewCell
-        bankAccountCell.bankAccount = bankAccountToShow
+        if let bankAccount = DatabaseSimulator.bankAccountToShow {
+            bankAccountCell.bankAccount = bankAccount
+        }
+        bankAccountCell.bottomLineView.isHidden = true
         return bankAccountCell
     }
     

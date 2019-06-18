@@ -794,6 +794,9 @@
                                         <state key="normal" title="Oportunidades de Trabalho">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goToOpportunityList" destination="5yM-NG-9gQ" eventType="touchUpInside" id="fGQ-WK-Qwf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhb-Ze-6Kp">
                                         <rect key="frame" x="0.0" y="144" width="374" height="40"/>
@@ -823,6 +826,7 @@
                     <connections>
                         <outlet property="institutionNameLabel" destination="y1S-rA-Jey" id="Spg-7b-oZi"/>
                         <segue destination="fTR-Q5-hyn" kind="show" identifier="bankAccountList" id="oc3-4g-i1H"/>
+                        <segue destination="bTc-1z-aKs" kind="show" identifier="opportunityList" id="gr9-pS-aNX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9v-F4-8Yu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -856,7 +860,7 @@
                                     <constraint firstAttribute="height" constant="1" id="w1J-58-p1q"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E2s-c2-7vW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E2s-c2-7vW">
                                 <rect key="frame" x="20" y="231" width="374" height="571"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -869,6 +873,9 @@
                                 <state key="normal" title="Cadastrar Oportunidade de Trabaho">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToAddOpportunity" destination="bTc-1z-aKs" eventType="touchUpInside" id="uTS-PR-Vbb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -892,15 +899,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0LB-U5-ZEe"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="E2s-c2-7vW" id="pTf-WJ-uoS"/>
+                        <segue destination="X33-Li-VmL" kind="presentation" identifier="addOpportunity" id="7QI-9a-mQE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQv-5u-GWH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2211.594202898551" y="1172.5446428571429"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Job Opportunity View Controller-->
         <scene sceneID="PJl-5K-UQH">
             <objects>
-                <viewController id="X33-Li-VmL" sceneMemberID="viewController">
+                <viewController id="X33-Li-VmL" customClass="AddJobOpportunityViewController" customModule="WeVol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RTl-QG-LTj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -915,6 +926,9 @@
                                             <constraint firstAttribute="width" constant="30" id="dbM-gb-GI7"/>
                                         </constraints>
                                         <state key="normal" image="closeIcon"/>
+                                        <connections>
+                                            <action selector="closeJobOpportunityScreen" destination="X33-Li-VmL" eventType="touchUpInside" id="Vi5-5J-XYt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -962,6 +976,9 @@
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addJobOpportunity" destination="X33-Li-VmL" eventType="touchUpInside" id="pIy-qx-09L"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descrição do trabalho" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Luf-Mg-kAv">
                                 <rect key="frame" x="20" y="370.5" width="374" height="120"/>
@@ -999,6 +1016,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4wj-Pf-ICd"/>
                     </view>
+                    <connections>
+                        <outlet property="jobDatePicker" destination="6Rr-bZ-44N" id="g6Y-Ic-js6"/>
+                        <outlet property="jobDetailsTextView" destination="Luf-Mg-kAv" id="7gm-lA-ixV"/>
+                        <outlet property="jobTypeAnchorView" destination="g0P-1S-Mgh" id="Fxo-tV-8su"/>
+                        <outlet property="jobTypeTextField" destination="a9z-mK-5xK" id="nZ7-Ph-BT2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Tb-Rn-XGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1146,6 +1169,13 @@
                                     <action selector="addBankAccount" destination="3T1-x6-C5S" eventType="touchUpInside" id="6jb-MF-Fpb"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVI-1e-sgJ">
+                                <rect key="frame" x="20" y="205" width="374" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="aOu-VN-OaY"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1163,17 +1193,26 @@
                             <constraint firstItem="V3i-T0-Qqu" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" constant="20" id="hUM-iz-yYj"/>
                             <constraint firstItem="SPy-u7-IzZ" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" id="iHp-Tz-UpI"/>
                             <constraint firstItem="wBA-dk-ufy" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" constant="20" id="jV3-TZ-jCb"/>
+                            <constraint firstItem="GVI-1e-sgJ" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" constant="20" id="kwZ-py-tCx"/>
+                            <constraint firstItem="GVI-1e-sgJ" firstAttribute="top" secondItem="YEK-JF-uJv" secondAttribute="bottom" id="lFO-rs-KYJ"/>
                             <constraint firstItem="daI-XK-5Wa" firstAttribute="trailing" secondItem="P16-5v-3L9" secondAttribute="trailing" constant="20" id="ltI-R3-VBb"/>
                             <constraint firstItem="SPy-u7-IzZ" firstAttribute="trailing" secondItem="daI-XK-5Wa" secondAttribute="trailing" id="pAF-E9-5VJ"/>
+                            <constraint firstItem="daI-XK-5Wa" firstAttribute="trailing" secondItem="GVI-1e-sgJ" secondAttribute="trailing" constant="20" id="qqa-bR-Uth"/>
                             <constraint firstItem="daI-XK-5Wa" firstAttribute="trailing" secondItem="V3i-T0-Qqu" secondAttribute="trailing" constant="20" id="tPD-68-8fg"/>
                             <constraint firstItem="P16-5v-3L9" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" constant="20" id="zpr-zW-aBY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="daI-XK-5Wa"/>
                     </view>
+                    <connections>
+                        <outlet property="bankAccountAgencyTextField" destination="P16-5v-3L9" id="yoe-s6-RVr"/>
+                        <outlet property="bankAccountNumber" destination="wBA-dk-ufy" id="w2M-yc-7vP"/>
+                        <outlet property="bankNameAnchorView" destination="GVI-1e-sgJ" id="6l8-c7-mhD"/>
+                        <outlet property="bankNameTextField" destination="YEK-JF-uJv" id="e4w-cc-k6a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOR-qD-tQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3135" y="453"/>
+            <point key="canvasLocation" x="3134.7826086956525" y="452.67857142857139"/>
         </scene>
         <!--Select Sign Up Type View Controller-->
         <scene sceneID="ot4-zb-ire">
@@ -1322,6 +1361,7 @@
                         <viewLayoutGuide key="safeArea" id="4en-rA-1I1"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextView" destination="aks-pR-krP" id="mqI-jN-AFM"/>
                         <outlet property="institutionNameTextField" destination="0NP-vg-lU4" id="cL2-5t-tfQ"/>
                         <segue destination="60k-dH-odN" kind="show" identifier="InstitutionMapSignUp" id="IhU-MM-8EY"/>
                     </connections>
