@@ -18,8 +18,8 @@ class BankAccountTableViewCell: UITableViewCell {
     var bankAccount: BankAccount! {
         didSet {
             bankName.text = bankAccount.bankName
-            bankAccountAgency.text = bankAccount.agencyNumber
-            bankAccountNumber.text = bankAccount.accountNumber
+            bankAccountAgency.text = "Agência: \(bankAccount.agencyNumber)"
+            bankAccountNumber.text = "Conta: \(bankAccount.accountNumber)"
         }
     }
     

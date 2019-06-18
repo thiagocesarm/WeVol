@@ -19,8 +19,10 @@ class SignInViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if DatabaseSimulator.isLoggedIn {
+        if DatabaseSimulator.isLoggedIn, DatabaseSimulator.loggedInstitution != nil {
             let perfilVC = storyboard?.instantiateViewController(withIdentifier: "UserMenu") as! UserMenuViewController
+            
+            perfilVC.institution = DatabaseSimulator.loggedInstitution!
             navigationController?.pushViewController(perfilVC, animated: false)
         }
     }

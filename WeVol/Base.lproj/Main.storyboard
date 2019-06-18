@@ -315,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AWN-9k-vk9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266.666666666667" y="-944.19642857142856"/>
+            <point key="canvasLocation" x="1370" y="-928"/>
         </scene>
         <!--Donation View Controller-->
         <scene sceneID="5xX-ma-nrX">
@@ -782,7 +782,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="fTR-Q5-hyn" kind="show" id="Pvm-bw-jMh"/>
+                                            <action selector="goToAddBankAccountScreen" destination="5yM-NG-9gQ" eventType="touchUpInside" id="atl-Xs-cDR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhj-K3-cZ7">
@@ -822,16 +822,17 @@
                     <navigationItem key="navigationItem" id="bvH-LE-vqQ"/>
                     <connections>
                         <outlet property="institutionNameLabel" destination="y1S-rA-Jey" id="Spg-7b-oZi"/>
+                        <segue destination="fTR-Q5-hyn" kind="show" identifier="bankAccountList" id="oc3-4g-i1H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9v-F4-8Yu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2267" y="-64"/>
+            <point key="canvasLocation" x="1265" y="823"/>
         </scene>
-        <!--View Controller-->
+        <!--Bank Account List View Controller-->
         <scene sceneID="6Ki-dj-DSz">
             <objects>
-                <viewController id="fTR-Q5-hyn" sceneMemberID="viewController">
+                <viewController id="fTR-Q5-hyn" customClass="BankAccountListViewController" customModule="WeVol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="64H-CU-BWS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -856,18 +857,29 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkQ-UU-fl1">
-                                <rect key="frame" x="20" y="822" width="374" height="40"/>
+                                <rect key="frame" x="20" y="810" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="yNS-gw-tZe"/>
                                 </constraints>
-                                <state key="normal" title="Cadastrar Conta">
+                                <state key="normal" title="Cadastrar Nova Conta">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToAddAccountPage" destination="fTR-Q5-hyn" eventType="touchUpInside" id="fAY-vx-aHi"/>
+                                </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uHI-lE-O6b">
+                                <rect key="frame" x="20" y="231" width="374" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="FkQ-UU-fl1" firstAttribute="top" secondItem="uHI-lE-O6b" secondAttribute="bottom" constant="8" id="FvY-4V-Kt0"/>
+                            <constraint firstItem="uHI-lE-O6b" firstAttribute="leading" secondItem="P4X-Lk-Sg6" secondAttribute="leading" constant="20" id="HYj-S6-2oZ"/>
+                            <constraint firstItem="P4X-Lk-Sg6" firstAttribute="bottom" secondItem="FkQ-UU-fl1" secondAttribute="bottom" constant="12" id="JB4-aw-d5P"/>
+                            <constraint firstItem="uHI-lE-O6b" firstAttribute="top" secondItem="La7-wp-oau" secondAttribute="bottom" constant="8" id="Psl-Zi-6do"/>
                             <constraint firstItem="Yfa-Nv-dfz" firstAttribute="leading" secondItem="P4X-Lk-Sg6" secondAttribute="leading" constant="20" id="SfN-cr-4s6"/>
                             <constraint firstItem="P4X-Lk-Sg6" firstAttribute="trailing" secondItem="FkQ-UU-fl1" secondAttribute="trailing" constant="20" id="WPo-Ls-4Ej"/>
                             <constraint firstItem="La7-wp-oau" firstAttribute="top" secondItem="sVK-Sz-Ing" secondAttribute="bottom" constant="8" id="XwX-iJ-swg"/>
@@ -875,23 +887,27 @@
                             <constraint firstItem="P4X-Lk-Sg6" firstAttribute="trailing" secondItem="sVK-Sz-Ing" secondAttribute="trailing" constant="20" id="aXg-IZ-9Da"/>
                             <constraint firstItem="FkQ-UU-fl1" firstAttribute="leading" secondItem="P4X-Lk-Sg6" secondAttribute="leading" constant="20" id="hAy-lE-8bD"/>
                             <constraint firstItem="La7-wp-oau" firstAttribute="leading" secondItem="P4X-Lk-Sg6" secondAttribute="leading" constant="20" id="iS5-G7-c42"/>
+                            <constraint firstItem="P4X-Lk-Sg6" firstAttribute="trailing" secondItem="uHI-lE-O6b" secondAttribute="trailing" constant="20" id="nAL-Gj-4US"/>
                             <constraint firstItem="sVK-Sz-Ing" firstAttribute="leading" secondItem="P4X-Lk-Sg6" secondAttribute="leading" constant="20" id="pdM-b9-4GK"/>
                             <constraint firstItem="sVK-Sz-Ing" firstAttribute="top" secondItem="Yfa-Nv-dfz" secondAttribute="bottom" constant="40" id="vWv-Up-FaD"/>
-                            <constraint firstItem="FkQ-UU-fl1" firstAttribute="bottom" secondItem="P4X-Lk-Sg6" secondAttribute="bottom" id="wfv-w6-6gh"/>
                             <constraint firstItem="P4X-Lk-Sg6" firstAttribute="trailing" secondItem="Yfa-Nv-dfz" secondAttribute="trailing" constant="20" id="yCb-cv-YZo"/>
                             <constraint firstItem="P4X-Lk-Sg6" firstAttribute="trailing" secondItem="La7-wp-oau" secondAttribute="trailing" constant="20" id="yD1-EL-7ml"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P4X-Lk-Sg6"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="uHI-lE-O6b" id="U9B-Yo-7Y9"/>
+                        <segue destination="3T1-x6-C5S" kind="presentation" identifier="showAddBankAccount" id="IUm-No-feM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qbs-Pf-vmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3317" y="-69"/>
+            <point key="canvasLocation" x="2233" y="823"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Bank Account View Controller-->
         <scene sceneID="dzS-Ez-Kl2">
             <objects>
-                <viewController id="3T1-x6-C5S" sceneMemberID="viewController">
+                <viewController id="3T1-x6-C5S" customClass="AddBankAccountViewController" customModule="WeVol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kUs-SI-k75">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -906,6 +922,9 @@
                                             <constraint firstAttribute="height" constant="30" id="Xwa-EV-vof"/>
                                         </constraints>
                                         <state key="normal" image="closeIcon"/>
+                                        <connections>
+                                            <action selector="closeAddBankAccountScreen" destination="3T1-x6-C5S" eventType="touchUpInside" id="iLk-1P-9bL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -915,19 +934,71 @@
                                     <constraint firstAttribute="height" constant="50" id="ju9-wd-EAh"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastrar dados bancários" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pn0-aJ-RrN">
+                                <rect key="frame" x="20" y="126" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Banco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEK-JF-uJv">
+                                <rect key="frame" x="20" y="175" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Agência" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P16-5v-3L9">
+                                <rect key="frame" x="20" y="213" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Conta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wBA-dk-ufy">
+                                <rect key="frame" x="20" y="251" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3i-T0-Qqu">
+                                <rect key="frame" x="20" y="830" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="igi-jQ-phB"/>
+                                </constraints>
+                                <state key="normal" title="Cadastrar Conta">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addBankAccount" destination="3T1-x6-C5S" eventType="touchUpInside" id="6jb-MF-Fpb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="YEK-JF-uJv" firstAttribute="top" secondItem="Pn0-aJ-RrN" secondAttribute="bottom" constant="20" id="274-nG-GB6"/>
+                            <constraint firstItem="YEK-JF-uJv" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" constant="20" id="7V6-Pq-A59"/>
+                            <constraint firstItem="V3i-T0-Qqu" firstAttribute="bottom" secondItem="daI-XK-5Wa" secondAttribute="bottom" constant="8" id="7qx-UT-fPo"/>
+                            <constraint firstItem="daI-XK-5Wa" firstAttribute="trailing" secondItem="YEK-JF-uJv" secondAttribute="trailing" constant="20" id="7uB-8c-qQ7"/>
+                            <constraint firstItem="P16-5v-3L9" firstAttribute="top" secondItem="YEK-JF-uJv" secondAttribute="bottom" constant="8" id="Brk-IW-JN6"/>
+                            <constraint firstItem="daI-XK-5Wa" firstAttribute="trailing" secondItem="Pn0-aJ-RrN" secondAttribute="trailing" constant="20" id="EcC-sD-FAH"/>
+                            <constraint firstItem="Pn0-aJ-RrN" firstAttribute="top" secondItem="SPy-u7-IzZ" secondAttribute="bottom" constant="32" id="Gfv-Jf-axd"/>
+                            <constraint firstItem="daI-XK-5Wa" firstAttribute="trailing" secondItem="wBA-dk-ufy" secondAttribute="trailing" constant="20" id="LOQ-Hh-kwL"/>
+                            <constraint firstItem="Pn0-aJ-RrN" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" constant="20" id="MFJ-rk-2NO"/>
                             <constraint firstItem="SPy-u7-IzZ" firstAttribute="top" secondItem="daI-XK-5Wa" secondAttribute="top" id="Zae-ZV-r4P"/>
+                            <constraint firstItem="wBA-dk-ufy" firstAttribute="top" secondItem="P16-5v-3L9" secondAttribute="bottom" constant="8" id="hLX-4c-ZRJ"/>
+                            <constraint firstItem="V3i-T0-Qqu" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" constant="20" id="hUM-iz-yYj"/>
                             <constraint firstItem="SPy-u7-IzZ" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" id="iHp-Tz-UpI"/>
+                            <constraint firstItem="wBA-dk-ufy" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" constant="20" id="jV3-TZ-jCb"/>
+                            <constraint firstItem="daI-XK-5Wa" firstAttribute="trailing" secondItem="P16-5v-3L9" secondAttribute="trailing" constant="20" id="ltI-R3-VBb"/>
                             <constraint firstItem="SPy-u7-IzZ" firstAttribute="trailing" secondItem="daI-XK-5Wa" secondAttribute="trailing" id="pAF-E9-5VJ"/>
+                            <constraint firstItem="daI-XK-5Wa" firstAttribute="trailing" secondItem="V3i-T0-Qqu" secondAttribute="trailing" constant="20" id="tPD-68-8fg"/>
+                            <constraint firstItem="P16-5v-3L9" firstAttribute="leading" secondItem="daI-XK-5Wa" secondAttribute="leading" constant="20" id="zpr-zW-aBY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="daI-XK-5Wa"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rOR-qD-tQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4923" y="-64"/>
+            <point key="canvasLocation" x="3190" y="823"/>
         </scene>
         <!--Select Sign Up Type View Controller-->
         <scene sceneID="ot4-zb-ire">

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uqS-rt-XbT" customClass="BankAccountTableViewCell" customModule="WeVol" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uqS-rt-XbT" id="xbm-JP-gXS">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="113.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqe-Tq-6Ck">
+                        <rect key="frame" x="0.0" y="12" width="414" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57r-am-ijB">
+                        <rect key="frame" x="0.0" y="45" width="414" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-Qm-YIY">
+                        <rect key="frame" x="0.0" y="78" width="414" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Rw-7x-8LC">
+                        <rect key="frame" x="0.0" y="112.5" width="414" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="dWa-D7-c5L"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6zi-Qm-YIY" firstAttribute="leading" secondItem="xbm-JP-gXS" secondAttribute="leading" id="0sN-9o-ibK"/>
+                    <constraint firstAttribute="trailing" secondItem="pqe-Tq-6Ck" secondAttribute="trailing" id="43h-4P-thD"/>
+                    <constraint firstAttribute="trailing" secondItem="6zi-Qm-YIY" secondAttribute="trailing" id="C3h-n1-Mjc"/>
+                    <constraint firstAttribute="trailing" secondItem="57r-am-ijB" secondAttribute="trailing" id="Cmc-5T-YU6"/>
+                    <constraint firstItem="1Rw-7x-8LC" firstAttribute="top" secondItem="6zi-Qm-YIY" secondAttribute="bottom" constant="12" id="J7P-eC-bak"/>
+                    <constraint firstItem="57r-am-ijB" firstAttribute="top" secondItem="pqe-Tq-6Ck" secondAttribute="bottom" constant="12" id="KpW-eM-JHC"/>
+                    <constraint firstItem="pqe-Tq-6Ck" firstAttribute="leading" secondItem="xbm-JP-gXS" secondAttribute="leading" id="Kz6-wZ-v1F"/>
+                    <constraint firstItem="6zi-Qm-YIY" firstAttribute="top" secondItem="57r-am-ijB" secondAttribute="bottom" constant="12" id="M0f-TW-YBg"/>
+                    <constraint firstAttribute="trailing" secondItem="1Rw-7x-8LC" secondAttribute="trailing" id="iVc-uV-m4g"/>
+                    <constraint firstAttribute="bottom" secondItem="1Rw-7x-8LC" secondAttribute="bottom" id="kCp-Ze-C2a"/>
+                    <constraint firstItem="1Rw-7x-8LC" firstAttribute="leading" secondItem="xbm-JP-gXS" secondAttribute="leading" id="xY9-Fu-LCq"/>
+                    <constraint firstItem="pqe-Tq-6Ck" firstAttribute="top" secondItem="xbm-JP-gXS" secondAttribute="top" constant="12" id="ynJ-LC-ko2"/>
+                    <constraint firstItem="57r-am-ijB" firstAttribute="leading" secondItem="xbm-JP-gXS" secondAttribute="leading" id="zf6-bx-4PF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bankAccountAgency" destination="57r-am-ijB" id="0cP-vB-m1p"/>
+                <outlet property="bankAccountNumber" destination="6zi-Qm-YIY" id="4uJ-A9-MM9"/>
+                <outlet property="bankName" destination="pqe-Tq-6Ck" id="hAQ-Iu-cba"/>
+                <outlet property="bottomLineView" destination="1Rw-7x-8LC" id="d5b-PU-5yr"/>
+            </connections>
+            <point key="canvasLocation" x="121.73913043478262" y="143.30357142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

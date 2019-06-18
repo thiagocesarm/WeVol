@@ -42,6 +42,9 @@ class InstitutionMapSignUpViewController: UIViewController {
     }
 
     @IBAction func confirmSignUp() {
+        DatabaseSimulator.isLoggedIn = true
+        DatabaseSimulator.loggedInstitution = DatabaseSimulator.getInstitutionData().first
+        self.navigationController?.popToRootViewController(animated: false)
     }
 }
 

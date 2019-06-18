@@ -30,5 +30,16 @@ class UserMenuViewController: UIViewController {
             self.present(alert, animated: true)
         }
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let addBankAccountViewController = segue.destination as! BankAccountListViewController
+//        let institution = DatabaseSimulator.getInstitutionData().first
+//        addBankAccountViewController.institution = institution
+//    }
+    
+    @IBAction func goToAddBankAccountScreen() {
+        performSegue(withIdentifier: "bankAccountList", sender: self)
+    }
+    
 
 }
