@@ -39,4 +39,10 @@ class UserMenuViewController: UIViewController {
         performSegue(withIdentifier: "opportunityList", sender: self)
     }
     
+    @IBAction func logout(_ sender: Any) {
+        DatabaseSimulator.isLoggedIn = false
+        DatabaseSimulator.loggedInstitution = nil
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }

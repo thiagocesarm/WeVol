@@ -807,6 +807,9 @@
                                         <state key="normal" title="Sair">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logout:" destination="5yM-NG-9gQ" eventType="touchUpInside" id="mXV-vV-u4c"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
