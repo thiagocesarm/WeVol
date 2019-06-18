@@ -28,6 +28,13 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func goToUserPage() {
+        DatabaseSimulator.isLoggedIn = true
+        DatabaseSimulator.loggedInstitution = DatabaseSimulator.getInstitutionData().first
+        
+        let perfilVC = storyboard?.instantiateViewController(withIdentifier: "UserMenu") as! UserMenuViewController
+        
+        perfilVC.institution = DatabaseSimulator.loggedInstitution!
+        navigationController?.pushViewController(perfilVC, animated: false)
     }
     
     @IBAction func goToSignUpPage() {

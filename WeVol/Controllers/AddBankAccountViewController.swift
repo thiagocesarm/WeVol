@@ -12,6 +12,7 @@ class AddBankAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func closeAddBankAccountScreen() {
