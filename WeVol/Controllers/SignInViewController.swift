@@ -29,7 +29,7 @@ class SignInViewController: UIViewController {
     
     @IBAction func goToUserPage() {
         DatabaseSimulator.isLoggedIn = true
-        DatabaseSimulator.loggedInstitution = DatabaseSimulator.getInstitutionData().first
+        DatabaseSimulator.loggedInstitution = DatabaseSimulator.simulatedInstitutionLogged
         
         let perfilVC = storyboard?.instantiateViewController(withIdentifier: "UserMenu") as! UserMenuViewController
         
